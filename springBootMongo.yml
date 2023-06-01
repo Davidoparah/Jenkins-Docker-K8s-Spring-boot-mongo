@@ -133,9 +133,10 @@ kind: Service
 metadata:
   name: mongo
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: mongodb
   ports:
   - port: 27017
     targetPort: 27017
+    nodePort: 32767
