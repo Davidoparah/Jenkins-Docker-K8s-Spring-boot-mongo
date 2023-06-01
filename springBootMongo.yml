@@ -87,7 +87,8 @@ spec:
   ports:
   - port: 80
     targetPort: 8080
-  type: NodePort
+    nodePort: 32767
+  type: LoadBalancer
 ---
 # Mongo db pod with volumes(HostPath)
 apiVersion: apps/v1
@@ -133,10 +134,10 @@ kind: Service
 metadata:
   name: mongo
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: mongodb
   ports:
   - port: 27017
     targetPort: 27017
-    nodePort: 32767
+    
