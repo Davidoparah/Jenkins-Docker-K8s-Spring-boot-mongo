@@ -87,7 +87,7 @@ spec:
   ports:
   - port: 80
     targetPort: 8080
-    nodePort: 32767
+    nodePort: 32760
   type: LoadBalancer
 ---
 # Mongo db pod with volumes(HostPath)
