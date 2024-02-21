@@ -60,7 +60,7 @@ spec:
     spec:
       containers:
       - name: springappcontainer
-        image: mujimoyen/spring-boot-mongo:1
+        image: mujimoyen/spring-boot-mongo:latest
         ports:
         - containerPort: 8080
         env:
@@ -87,7 +87,7 @@ spec:
   ports:
   - port: 80
     targetPort: 8080
-    nodePort: 32760
+    nodePort: 32767
   type: LoadBalancer
 ---
 # Mongo db pod with volumes(HostPath)
